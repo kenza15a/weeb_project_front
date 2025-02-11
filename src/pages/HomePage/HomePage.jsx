@@ -3,10 +3,12 @@ import Hero from "../../components/Home/Hero/Hero";
 import desktopImage from "../../assets/images/Desktop.png";
 import Testimonials from "../../components/Home/Testiminals/Testimonials";
 import logo1 from "../../assets/images/testimonials/Logo-grey.png";
-import logo2 from "../../assets/images/testimonials/Logo-grey (1).png"
-import logo3 from "../../assets/images/testimonials/Logo-grey (2).png"
-import logo4 from "../../assets/images/testimonials/Logo-grey (3).png"
-import logo5 from "../../assets/images/testimonials/Logo-grey (4).png"
+import logo2 from "../../assets/images/testimonials/Logo-grey (1).png";
+import logo3 from "../../assets/images/testimonials/Logo-grey (2).png";
+import logo4 from "../../assets/images/testimonials/Logo-grey (3).png";
+import logo5 from "../../assets/images/testimonials/Logo-grey (4).png";
+import InfosSection from "../../components/Home/CTAsection/InfosSection";
+import RotatingSquares from "../../components/Home/CTAsection/RotatingSquares ";
 const HomePage = () => {
   // Define title as an array of parts, grouping elements in separate lines
   const heroTitleParts = [
@@ -41,6 +43,22 @@ const HomePage = () => {
         image={desktopImage}
       />
       <Testimonials titleText="Ils nous font confiance" imagesArray={logos} />
+      <InfosSection
+        title="Apprenez et progressez"
+        description="Que vous débutiez en développement web ou que vous soyez un expert cherchant à approfondir vos connaissances, nous vous proposons des tutoriels, guides et bonnes pratiques pour apprendre efficacement."
+        buttonText="Explorer les ressources"
+        illustrationComponent={<img src={desktopImage} alt="Illustration" className="w-full " />}
+        reverse={false}
+      />
+
+      {/* Second Section - Shows Rotating Animation */}
+      <InfosSection
+        title="Restez informé des dernières tendances"
+        description="Chaque semaine, nous analysons les nouveautés du web : frameworks émergents, bonnes pratiques SEO, accessibilité, et bien plus encore. Ne manquez aucune actualité du digital !"
+        buttonText="Lire les articles récents"
+        illustrationComponent={<RotatingSquares />} // Instead of an image, we pass the animated component
+        reverse={true}
+      />
     </main>
   );
 };

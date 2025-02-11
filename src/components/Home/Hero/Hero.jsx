@@ -1,5 +1,5 @@
 import React from "react";
-
+import Button from "../../Button/Button";
 const Hero = ({ title, description, image }) => {
   return (
     <section className="flex flex-col justify-center items-center gap-4  p-4">
@@ -13,6 +13,10 @@ const Hero = ({ title, description, image }) => {
           </React.Fragment>
         ))}
       </p>
+      <div className="flex justify-center items-center mt-4 gap-4">
+        <Button text="Découvrir les articles" type="button" variant="accent" />
+        <Button text="Sabonner a la newsletter " variant="clear" />
+      </div>
       <img src={image} alt="hero" className="w-max h-max" />
     </section>
   );

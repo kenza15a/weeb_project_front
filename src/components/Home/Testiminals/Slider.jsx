@@ -5,10 +5,10 @@ const Slider = ({ imagesArray, className }) => {
     <div className="overflow-hidden w-[80%] py-8 ">
       <motion.div
         className="flex space-x-12"
-        animate={{ x: ["0%", "-100%"] }} // Move from start to end
+        animate={{ x: ["0%", "100%"] }} // Move from start to end
         transition={{
           ease: "linear",
-          duration: 20,
+          duration: 15,
           repeat: Infinity, // Infinite loop
         }}
       >
