@@ -22,4 +22,24 @@ body {
     .text-heading {
         @apply text-[#C084FC];
     }
+
+    .heading-xl {
+        @apply text-7xl font-bold text-headings;
+    }
+
+    .heading-lg {
+        @apply text-5xl font-semibold text-headings;
+    }
+
+    .heading-md {
+        @apply text-3xl font-medium text-headings;
+    }
+
+    .heading-sm {
+        @apply text-xl font-normal text-headings;
+    }
+
+    .heading-hero {
+        @apply text-[72px] uppercase tracking-wide;
+    }
 }
