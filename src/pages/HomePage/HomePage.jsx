@@ -10,6 +10,7 @@ import logo5 from "../../assets/images/testimonials/Logo-grey (4).png";
 import InfosSection from "../../components/Home/CTAsection/InfosSection";
 import RotatingSquares from "../../components/Home/CTAsection/RotatingSquares ";
 import sectionTitles from "../../components/Home/CTAsection/SectionTitle";
+import clsx from "clsx";
 const HomePage = () => {
   //CTA titles
   const FirstSectionTitle = sectionTitles.FirstSectionTitle;
@@ -32,17 +33,59 @@ const HomePage = () => {
     <main className="bg-main flex-grow w-full justify-center items-center py-6">
       <Hero
         title={
-          <div className="flex flex-col items-center text-center gap-2">
-            {heroTitleParts.map((line, lineIndex) => (
-              <div key={lineIndex} className="flex gap-1">
-                {line.map((part, index) => (
-                  <span key={index} className={part.className}>
-                    {part.text}
-                  </span>
-                ))}
+          <>
+            <div className="hidden md:flex md:flex-col md:items-center md:text-center md:gap-x-4 ">
+              {heroTitleParts.map((line, lineIndex) => (
+                <div
+                  key={lineIndex}
+                  className="flex md:flex-row flex-col gap-2 "
+                >
+                  {line.map((part, index) => (
+                    <span key={index} className={part.className}>
+                      {part.text}
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+            {/* Mobile Display */}
+            <div className="md:hidden flex">
+              <div className="grid grid-cols-2">
+                <span
+                  className={clsx(
+                    heroTitleParts[0][0].className,
+                    "col-span-1 row-span-1"
+                  )}
+                >
+                  {heroTitleParts[0][0].text}
+                </span>
+                <span
+                  className={clsx(
+                    heroTitleParts[0][1].className,
+                    "col-span-1 row-span-1"
+                  )}
+                >
+                  {heroTitleParts[0][1].text}
+                </span>
+                <span
+                  className={clsx(
+                    heroTitleParts[0][2].className,
+                    "col-span-1 row-span-1"
+                  )}
+                >
+                  {heroTitleParts[0][2].text}
+                </span>
+                <span
+                  className={clsx(
+                    heroTitleParts[1][0].className,
+                    "col-span-2 row-span-1"
+                  )}
+                >
+                  {heroTitleParts[1][0].text}
+                </span>
               </div>
-            ))}
-          </div>
+            </div>
+          </>
         }
         description={heroDescription}
         image={desktopImage}
