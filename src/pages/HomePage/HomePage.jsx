@@ -9,7 +9,11 @@ import logo4 from "../../assets/images/testimonials/Logo-grey (3).png";
 import logo5 from "../../assets/images/testimonials/Logo-grey (4).png";
 import InfosSection from "../../components/Home/CTAsection/InfosSection";
 import RotatingSquares from "../../components/Home/CTAsection/RotatingSquares ";
+import sectionTitles from "../../components/Home/CTAsection/SectionTitle";
 const HomePage = () => {
+  //CTA titles
+  const FirstSectionTitle = sectionTitles.FirstSectionTitle;
+  const SecondSectionTitle = sectionTitles.SecondSectionTitle;
   // Define title as an array of parts, grouping elements in separate lines
   const heroTitleParts = [
     [
@@ -22,6 +26,7 @@ const HomePage = () => {
   const logos = [logo1, logo2, logo3, logo4, logo5];
   // Hero description with line breaks
   const heroDescription = `Le monde du web évolue constamment, et nous sommes là pour vous guider à travers ses tendances,\n technologies et meilleures pratiques. Que vous soyez développeur, designer ou passionné du digital,\n notre blog vous offre du contenu de qualité pour rester à la pointe.`;
+  //CTA titles
 
   return (
     <main className="bg-main flex-grow w-full justify-center items-center py-6">
@@ -43,20 +48,27 @@ const HomePage = () => {
         image={desktopImage}
       />
       <Testimonials titleText="Ils nous font confiance" imagesArray={logos} />
+      {/* First Section - Text on Left */}
       <InfosSection
-        title="Apprenez et progressez"
+        title={<FirstSectionTitle />}
+        Subtitle="Des ressources pour tous les niveaux"
+        titleClasses="text-heading uppercase"
         description="Que vous débutiez en développement web ou que vous soyez un expert cherchant à approfondir vos connaissances, nous vous proposons des tutoriels, guides et bonnes pratiques pour apprendre efficacement."
         buttonText="Explorer les ressources"
-        illustrationComponent={<img src={desktopImage} alt="Illustration" className="w-full " />}
+        illustrationComponent={
+          <img src={desktopImage} alt="Illustration" className="w-full" />
+        }
         reverse={false}
       />
 
-      {/* Second Section - Shows Rotating Animation */}
+      {/* Second Section - Text on Right */}
       <InfosSection
-        title="Restez informé des dernières tendances"
+        title={<SecondSectionTitle />}
+        Subtitle="Le web, un écosystème en constante évolution"
+        titleClasses="text-heading uppercase"
         description="Chaque semaine, nous analysons les nouveautés du web : frameworks émergents, bonnes pratiques SEO, accessibilité, et bien plus encore. Ne manquez aucune actualité du digital !"
         buttonText="Lire les articles récents"
-        illustrationComponent={<RotatingSquares />} // Instead of an image, we pass the animated component
+        illustrationComponent={<RotatingSquares />}
         reverse={true}
       />
     </main>
