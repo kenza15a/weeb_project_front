@@ -1,4 +1,6 @@
 import React from "react";
+import clsx from "clsx";
+
 import Hero from "../../components/Home/Hero/Hero";
 import desktopImage from "../../assets/images/Desktop.png";
 import Testimonials from "../../components/Home/Testiminals/Testimonials";
@@ -10,7 +12,7 @@ import logo5 from "../../assets/images/testimonials/Logo-grey (4).png";
 import InfosSection from "../../components/Home/CTAsection/InfosSection";
 import RotatingSquares from "../../components/Home/CTAsection/RotatingSquares ";
 import sectionTitles from "../../components/Home/CTAsection/SectionTitle";
-import clsx from "clsx";
+import mobileSquaresImg from "../../assets/images/animated-sqares.png";
 const HomePage = () => {
   //CTA titles
   const FirstSectionTitle = sectionTitles.FirstSectionTitle;
@@ -102,6 +104,11 @@ const HomePage = () => {
           <img src={desktopImage} alt="Illustration" className="w-full" />
         }
         reverse={false}
+        //display on mobile too
+        mobileDisplay={true}
+        mobileIllustrationComponent={
+          <img src={desktopImage} alt="Illustration" className="w-full" />
+        }
       />
 
       {/* Second Section - Text on Right */}
@@ -113,6 +120,11 @@ const HomePage = () => {
         buttonText="Lire les articles récents"
         illustrationComponent={<RotatingSquares />}
         reverse={true}
+        // change the mobile illustration
+        mobileDisplay={true}
+        mobileIllustrationComponent={
+          <img src={mobileSquaresImg} alt="Illustration" className="w-full" />
+        }
       />
     </main>
   );

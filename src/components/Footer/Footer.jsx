@@ -46,7 +46,7 @@ const Footer = () => {
 
   return (
     <footer className=" bg-white min-h-[30vh] text-gray-400 py-8 px-8 md:px-12 flex flex-col justify-center items-center gap-y-4">
-      <div className="w-full h-full flex flex-row justify-around  gap-x-20   ">
+      <div className="w-full h-full flex md:flex-row flex-col justify-around  gap-x-20   ">
         <LogoBlock />
         <FooterBlocksArea blocks={blocks} className="ml-520" />
       </div>
