@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "@fontsource/inter"; // Defaults to 400 weight
 
 import Header from "./components/Home/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";

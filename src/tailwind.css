@@ -3,10 +3,15 @@
 @tailwind utilities;
 /*import roboto font*/
 @import '@fontsource/roboto';
+@import "@fontsource/inter";
 
 
 body {
     @apply font-roboto;
+}
+
+label {
+    @apply font-inter;
 }
 
 /* Custom utility classes */

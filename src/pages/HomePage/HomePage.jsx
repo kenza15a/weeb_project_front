@@ -21,10 +21,20 @@ const HomePage = () => {
   const heroTitleParts = [
     [
       { text: "Explorez le", className: "text-white font-bold" },
-      { text: "Web", className: "text-heading" },
+      { text: "Web", className: "text-heading font-thin" },
       { text: "sous toutes", className: "text-white font-bold" },
     ],
-    [{ text: "ses facettes", className: "text-white font-bold" }],
+    [
+      {
+        text: "ses ",
+        className: "text-white font-bold ",
+      },
+      {
+        text: " facettes",
+        className:
+          "text-white font-bold border-b border-headings border-b-[7px]",
+      },
+    ],
   ];
   const logos = [logo1, logo2, logo3, logo4, logo5];
   // Hero description with line breaks
@@ -80,10 +90,18 @@ const HomePage = () => {
                 <span
                   className={clsx(
                     heroTitleParts[1][0].className,
-                    "col-span-2 row-span-1"
+                    "ml-2 col-span-1 row-span-1"
                   )}
                 >
                   {heroTitleParts[1][0].text}
+                </span>
+                <span
+                  className={clsx(
+                    heroTitleParts[1][0].className,
+                    "col-span-1 row-span-1"
+                  )}
+                >
+                  {heroTitleParts[1][1].text}
                 </span>
               </div>
             </div>
@@ -91,6 +109,8 @@ const HomePage = () => {
         }
         description={heroDescription}
         image={desktopImage}
+        displayButton
+        displayImage
       />
       <Testimonials titleText="Ils nous font confiance" imagesArray={logos} />
       {/* First Section - Text on Left */}

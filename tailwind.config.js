@@ -11,6 +11,11 @@ module.exports = {
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
+        inter: ["Inter", "sans-serif"], // Add Inter
+        
+      },
+      fontSize: {
+        "label-input-text": "25px", // Custom font size
       },
     },
   },

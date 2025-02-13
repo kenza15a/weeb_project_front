@@ -21,8 +21,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full max-w-lg mx-auto p-6 border border-headings rounded-lg shadow-md bg-[rgba(175, 82, 222, 1)]">
-      <form onSubmit={handleSubmit} className="flex flex-col items-center gap-6">
+    <section className="w-full max-w-[90%] md:max-w-[60%] lg:max-w-[50%] mx-auto p-8 md:p-3 border border-headings rounded-lg shadow-md bg-[rgba(192,132,252,0.1)]">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col  gap-y-8 py-2 px-6"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Input
             label="Nom"
@@ -42,7 +45,7 @@ const ContactForm = () => {
           <Input
             label="Numero de téléphone"
             type="text"
-            name="email"
+            name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
           />{" "}
@@ -61,9 +64,9 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
         />
-        <Button text="Contact" type="submit" className="!max-w-max m-x-auto" />
+        <Button text="Contact" type="submit" className="!max-w-max !mx-auto" />
       </form>
-    </div>
+    </section>
   );
 };
 
