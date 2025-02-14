@@ -277,7 +277,6 @@ Dans les prochaines rubriques nous allons voir l’ensemble de technologies pack
 </ul>
 <p>**</p>
 <h2 id="quelques-captures">Quelques captures</h2>
-<pre><code>&lt;iframe src="https://www.behance.net/embed/project/219274011?ilo0=1" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"&gt;&lt;/iframe&gt;
-</code></pre>
+<iframe src="https://www.behance.net/embed/project/219274011?ilo0=1" height="316" width="404" allowfullscreen=""></iframe>
 <hr>
 
