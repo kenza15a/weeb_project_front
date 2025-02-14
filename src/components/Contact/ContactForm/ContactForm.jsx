@@ -7,6 +7,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     nom: "",
     prenom: "",
+    email: "",
     phoneNumber: "",
     message: "",
   });
