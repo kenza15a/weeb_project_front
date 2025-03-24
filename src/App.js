@@ -9,14 +9,6 @@ import Authentication from "./pages/Authentication/Authentication";
 import About from "./pages/About/About";
 import ScrollButtons from "./components/ScrollButton/ScrollButton";
 
-
-//testing routes
-//const Home = () => <div className="bg-main h-screen text-white flex justify-center items-center">Home Page</div>;
-//const About = () => <div className="bg-main h-screen text-white flex justify-center items-center">About Us</div>;
-//const Contact = () => <div className="bg-main h-screen text-white flex justify-center items-center">Contact Page</div>;
-//const Login = () => <div className="bg-main h-screen text-white flex justify-center items-center">Login Page</div>;
-//const Signup = () => <div className="bg-main h-screen text-white flex justify-center items-center">Sign Up Page</div>;
-
 function App() {
   return (
     <Router>
@@ -26,12 +18,14 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/login" element={<Authentication loginState="login" />} />
-        <Route path="/signup" element={<Authentication loginState="register" />} />
+        <Route
+          path="/signup"
+          element={<Authentication loginState="register" />}
+        />
       </Routes>
       <Footer />
       <ScrollButtons />
     </Router>
-
   );
 }
 
