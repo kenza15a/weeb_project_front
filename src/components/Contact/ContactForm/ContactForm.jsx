@@ -33,22 +33,25 @@ const ContactForm = () => {
             name="nom"
             value={formData.nom}
             onChange={handleChange}
+            aria-label="Nom"
           />
           <Input
             label="Prénom"
             name="prenom"
             value={formData.prenom}
             onChange={handleChange}
+            aria-label="Prénom"
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {" "}
           <Input
             label="Numero de téléphone"
-            type="text"
+            type="tel"
             name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
+            aria-label="Numero de téléphone"
           />{" "}
           <Input
             label="Email"
@@ -56,6 +59,7 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            aria-label="Email"
           />
         </div>
 
@@ -64,6 +68,7 @@ const ContactForm = () => {
           name="message"
           value={formData.message}
           onChange={handleChange}
+          aria-label="Message"
         />
         <Button text="Contact" type="submit" className="!max-w-max !mx-auto" />
       </form>
