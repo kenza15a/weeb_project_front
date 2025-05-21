@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import Button from "../../Button/Button";
+import Button from "../../ui/Button/Button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +25,11 @@ const Navbar = () => {
           <li>
             <Link to="/contact" className="hover:text-gray-400">
               Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/blog" className="hover:text-gray-400">
+              Le Blog
             </Link>
           </li>
         </ul>

@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../Button/Button";
+import Button from "../../ui/Button/Button";
 import clsx from "clsx";
 
 const Hero = ({

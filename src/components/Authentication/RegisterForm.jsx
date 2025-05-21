@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Button from "../Button/Button";
+import Button from "../ui/Button/Button";
 import Input from "../Form/Input/Input";
-import { Link } from "react-router-dom";
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({

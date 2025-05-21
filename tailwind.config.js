@@ -8,6 +8,7 @@ module.exports = {
         button: "#9333EA",
         bodyBg: "#0F172A",
         headings: "#C084FC",
+       
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],

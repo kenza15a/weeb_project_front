@@ -8,6 +8,8 @@ import ContactPage from "./pages/HomePage/CotactPage/ContactPage";
 import Authentication from "./pages/Authentication/Authentication";
 import About from "./pages/About/About";
 import ScrollButtons from "./components/ScrollButton/ScrollButton";
+import BlogPage from "./pages/Blog/BlogPage";
+import RegisterForm from "./components/Authentication/RegisterForm";
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/blog" element={<BlogPage />} />
         <Route path="/login" element={<Authentication loginState="login" />} />
+        <Route path="/register" element={<RegisterForm />} />
         <Route
           path="/signup"
           element={<Authentication loginState="register" />}
