@@ -1,6 +1,6 @@
 import React from "react";
-import ContactForm from "../../../components/Contact/ContactForm/ContactForm";
-import Hero from "../../../components/Home/Hero/Hero";
+import ContactForm from "../../components/Contact/ContactForm/ContactForm";
+import Hero from "../../components/Home/Hero/Hero";
 
 const ContactPage = () => {
   const heroDescription =

@@ -1,27 +1,22 @@
 import { useState } from "react";
 
-const PostFilters = () => {
+const PostFilters = ({ onSearchChange }) => {
   const [search, setSearch] = useState("");
 
-  const handleSearch = () => {
-    // To be wired with PostList via context or lifting state
-    console.log("Searching:", search);
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setSearch(value);
+    onSearchChange(value); // live propagate to parent
   };
 
   return (
     <div className="mb-4 flex">
       <input
         className="flex-1 border rounded p-2 mr-2"
-        placeholder="Search posts..."
+        placeholder="Trouver un article..."
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={handleChange}
       />
-      <button
-        onClick={handleSearch}
-        className="p-2 bg-blue-500 text-white rounded"
-      >
-        Search
-      </button>
     </div>
   );
 };

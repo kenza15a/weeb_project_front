@@ -33,17 +33,37 @@ let dummyPosts = Array.from({ length: 35 }, (_, i) => ({
             Post number: ${i + 1}`
 }));
 
-const POSTS_PER_PAGE = 6;
+/* const POSTS_PER_PAGE = 6;
+ */const normalizeText = (str) =>
+  str
+    .normalize("NFD") // decompose accents
+    .replace(/[\u0300-\u036f]/g, "") // remove accents
+    .toLowerCase();
 
-export const fetchPosts = async (page = 1) => {
+export const fetchPosts = async (page = 1, search = "") => {
+  const POSTS_PER_PAGE = 6;
+  let filtered = dummyPosts;
+
+  if (search.trim()) {
+    const q = normalizeText(search);
+    filtered = dummyPosts.filter((post) => {
+      const title = normalizeText(post.title);
+      const excerpt = normalizeText(post.excerpt);
+      const content = normalizeText(post.content);
+      return title.includes(q) || excerpt.includes(q) || content.includes(q);
+    });
+  }
+
   const start = (page - 1) * POSTS_PER_PAGE;
   const end = start + POSTS_PER_PAGE;
-  const paginatedPosts = dummyPosts.slice(start, end);
+  const paginatedPosts = filtered.slice(start, end);
 
   return new Promise((resolve) =>
-    setTimeout(() => resolve(paginatedPosts), 300) // simulate network delay
+    setTimeout(() => resolve(paginatedPosts), 300)
   );
 };
+
+
 
 export const addPost = async ({ title, content }) => {
   const newPost = {
